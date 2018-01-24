@@ -119,29 +119,47 @@ namespace PracticeProblems
 
             // create a for loop, print to the console every other element
 
-            string[] bunnies = new string[25];
-            for (int i =0; i <bunnies.Length; i++)
-            {
-                Console.WriteLine("Enter a breed of rabbit.");
-                bunnies[i] = Console.ReadLine();
+            //string[] bunnies = new string[25];
+            //for (int i =0; i <bunnies.Length; i++)
+            //{
+            //    Console.WriteLine("Enter a breed of rabbit.");
+            //    bunnies[i] = Console.ReadLine();
 
+            //}
+
+            //for (int i =0; i <bunnies.Length; i++)
+            //{
+            //    if (i%2 == 0)
+            //    {
+            //        Console.WriteLine(bunnies[i]);
+            //    }
+            //}
+
+            // create a program that reads 10 numbers from the keyboard and finds their sum and average
+
+            int arrayLength;
+            double sum = 0;
+            double average = 0;
+            Console.WriteLine("Enter the array length.");
+            arrayLength = int.Parse(Console.ReadLine());
+            int[] myNumbers = new int[arrayLength];
+            for (int i = 0; i <myNumbers.Length; i++)
+            {
+                Console.WriteLine("Enter a number.");
+                myNumbers[i] = int.Parse(Console.ReadLine());
             }
 
-            for (int i =0; i <bunnies.Length; i++)
+            for (int i=0; i<myNumbers.Length; i++) 
             {
-                if (i%2 == 0)
-                {
-                    Console.WriteLine(bunnies[i]);
-                }
+             
+                sum = sum + myNumbers[i];
+               
             }
+            Console.WriteLine("The sum is " + sum);
 
-        
+            average = sum / myNumbers.Length;
 
-
-
-
-
-        
+            Console.WriteLine("The average is " + average);
 
 
 
@@ -150,7 +168,14 @@ namespace PracticeProblems
 
 
 
-    
+
+
+
+
+
+
+
+
 
         }
     }
